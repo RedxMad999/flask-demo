@@ -1,0 +1,17 @@
+apiVersion: v2
+name: flask-demo-web-app
+description: A production-ready Helm chart for a Flask Demo Web Application
+version: 0.1.0
+appVersion: "1.0.0"
+keywords:
+  - flask
+  - python
+  - web
+  - demo
+home: https://example.com/flask-demo-web-app
+maintainers:
+  - name: Your Name
+    email: your.email@example.com
+sources:
+  - https://github.com/yourorg/flask-demo-web-app
+icon: https://raw.githubusercontent.com/yourorg/flask-demo-web-app/main/icon.png
