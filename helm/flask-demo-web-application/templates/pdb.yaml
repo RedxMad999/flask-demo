@@ -1,0 +1,12 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "flask-demo-web-app.fullname" . }}
+  labels:
+    {{- include "flask-demo-web-app.labels" . | nindent 4 }}
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "flask-demo-web-app.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
